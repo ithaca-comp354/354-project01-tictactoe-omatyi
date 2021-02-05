@@ -96,7 +96,7 @@ public class ExpertPlayer implements TicTacToePlayer {
     public Pair<Integer,Integer> ruleTwo(TicTacToeBoard curBoard,Pair<Integer, Integer> position,  char yourSymbol){
         char opSymbol = yourSymbol == 'X' ? 'O': 'X';
         Pair<Integer, Integer> currentPos = position;
-        TicTacToeBoard tempBoard = tryMove(curBoard, currentPos, opSymbol)
+        TicTacToeBoard tempBoard = tryMove(curBoard, currentPos, opSymbol);
         if(tempBoard.checkForWin(opSymbol)){
             return currentPos;
         }
