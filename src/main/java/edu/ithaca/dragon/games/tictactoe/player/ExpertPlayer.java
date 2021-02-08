@@ -103,8 +103,9 @@ public class ExpertPlayer implements TicTacToePlayer {
         else{
             return ruleThree(curBoard,currentPos, yourSymbol);
             
-    }
-}}
+        }
+    }   
+}
 
     
 
