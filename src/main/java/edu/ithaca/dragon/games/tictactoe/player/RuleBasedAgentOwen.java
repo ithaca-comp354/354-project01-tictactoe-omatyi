@@ -6,7 +6,7 @@ import org.javatuples.Pair;
 import edu.ithaca.dragon.games.tictactoe.board.TicTacToeBoard;
 
 
-public class ExpertPlayer implements TicTacToePlayer {
+public class RuleBasedAgentOwen implements TicTacToePlayer {
     /**
  * For some simple rules to consider (from section 1.2 here):
     Rule 1: If I have a winning move, take it.
