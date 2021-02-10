@@ -46,13 +46,13 @@ public class ExpertPlayer implements TicTacToePlayer {
     }
     public Pair<Integer,Integer> hWinTop(TicTacToeBoard curBoard, char yourSymbol,char oppSymbol){
         for(int i = 0; i<3;i++){
-            if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,0))==yourSymbol){
+            if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,0))==yourSymbol && curBoard.isSquareOpen(new Pair<>(2,0))){
                 return new Pair<>(2,0);
             }
-            else if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,0))==yourSymbol){
+            else if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,0))==yourSymbol && curBoard.isSquareOpen(new Pair<>(1,0))){
                 return new Pair<>(1,0);
             }
-            else if(curBoard.checkSquare(new Pair<>(1,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,0))==yourSymbol){
+            else if(curBoard.checkSquare(new Pair<>(1,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,0))==yourSymbol && curBoard.isSquareOpen(new Pair<>(0,0))){
                 return new Pair<>(0,0);
             } 
          }
@@ -60,13 +60,13 @@ public class ExpertPlayer implements TicTacToePlayer {
     }
     public Pair<Integer,Integer> hWinMid(TicTacToeBoard curBoard, char yourSymbol,char oppSymbol){
         for(int i = 0; i<3;i++){
-            if (curBoard.checkSquare(new Pair<>(0,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,1))==yourSymbol){
+            if (curBoard.checkSquare(new Pair<>(0,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,1))==yourSymbol && curBoard.isSquareOpen(new Pair<>(2,1))){
                 return new Pair<>(2,1);
             }
-            else if (curBoard.checkSquare(new Pair<>(0,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,1))==yourSymbol){
+            else if (curBoard.checkSquare(new Pair<>(0,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,1))==yourSymbol && curBoard.isSquareOpen(new Pair<>(1,1))){
                 return new Pair<>(1,1);
             }
-            else if(curBoard.checkSquare(new Pair<>(1,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,1))==yourSymbol){
+            else if(curBoard.checkSquare(new Pair<>(1,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,1))==yourSymbol && curBoard.isSquareOpen(new Pair<>(0,1))){
                 return new Pair<>(0,1);
             }
         }
@@ -74,13 +74,13 @@ public class ExpertPlayer implements TicTacToePlayer {
     }
     public Pair<Integer,Integer> hWinBot(TicTacToeBoard curBoard, char yourSymbol,char oppSymbol){
         for(int i = 0; i<3;i++){
-            if (curBoard.checkSquare(new Pair<>(0,2)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,2))==yourSymbol){
+            if (curBoard.checkSquare(new Pair<>(0,2)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(2,2))){
                 return new Pair<>(2,2);
             }
-            else if (curBoard.checkSquare(new Pair<>(0,2)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol){
+            else if (curBoard.checkSquare(new Pair<>(0,2)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(1,2))){
                 return new Pair<>(1,2);
             }
-            else if(curBoard.checkSquare(new Pair<>(1,2)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol){
+            else if(curBoard.checkSquare(new Pair<>(1,2)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(0,2))){
                 return new Pair<>(0,2);
             }
             
@@ -89,13 +89,13 @@ public class ExpertPlayer implements TicTacToePlayer {
     }
     public Pair<Integer,Integer> vWinLeft(TicTacToeBoard curBoard, char yourSymbol,char oppSymbol){
         for(int i = 0; i<3;i++){
-            if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,1))==yourSymbol){
+            if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,1))==yourSymbol && curBoard.isSquareOpen(new Pair<>(0,2))){
                 return new Pair<>(0,2);
             }
-            else if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,2))==yourSymbol){
+            else if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(0,1))){
                 return new Pair<>(0,1);
             }
-            else if(curBoard.checkSquare(new Pair<>(0,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,2))==yourSymbol){
+            else if(curBoard.checkSquare(new Pair<>(0,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(0,0))){
                 return new Pair<>(0,0);
             } 
          }
@@ -103,13 +103,13 @@ public class ExpertPlayer implements TicTacToePlayer {
     }
     public Pair<Integer,Integer> vWinMid(TicTacToeBoard curBoard, char yourSymbol,char oppSymbol){
         for(int i = 0; i<3;i++){
-            if (curBoard.checkSquare(new Pair<>(1,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,1))==yourSymbol){
+            if (curBoard.checkSquare(new Pair<>(1,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,1))==yourSymbol && curBoard.isSquareOpen(new Pair<>(1,2))){
                 return new Pair<>(1,2);
             }
-            else if (curBoard.checkSquare(new Pair<>(1,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,2))==yourSymbol){
+            else if (curBoard.checkSquare(new Pair<>(1,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(1,1))){
                 return new Pair<>(1,1);
             }
-            else if(curBoard.checkSquare(new Pair<>(1,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,2))==yourSymbol){
+            else if(curBoard.checkSquare(new Pair<>(1,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(1,0))){
                 return new Pair<>(1,0);
             }
         }
@@ -117,13 +117,13 @@ public class ExpertPlayer implements TicTacToePlayer {
     }
     public Pair<Integer,Integer> vWinRight(TicTacToeBoard curBoard, char yourSymbol,char oppSymbol){
         for(int i = 0; i<3;i++){
-            if (curBoard.checkSquare(new Pair<>(2,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,1))==yourSymbol){
+            if (curBoard.checkSquare(new Pair<>(2,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,1))==yourSymbol && curBoard.isSquareOpen(new Pair<>(2,2))){
                 return new Pair<>(2,2);
             }
-            else if (curBoard.checkSquare(new Pair<>(2,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol){
+            else if (curBoard.checkSquare(new Pair<>(2,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(2,1))){
                 return new Pair<>(2,1);
             }
-            else if(curBoard.checkSquare(new Pair<>(2,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol){
+            else if(curBoard.checkSquare(new Pair<>(2,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(2,0))){
                 return new Pair<>(2,0);
             }
         }
@@ -131,13 +131,13 @@ public class ExpertPlayer implements TicTacToePlayer {
     }
     public Pair<Integer,Integer> dWinLeft(TicTacToeBoard curBoard, char yourSymbol,char oppSymbol){
         for(int i = 0; i<3;i++){
-            if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,1))==yourSymbol){
+            if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,1))==yourSymbol && curBoard.isSquareOpen(new Pair<>(2,2))){
                 return new Pair<>(2,2);
             }
-            else if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol){
+            else if (curBoard.checkSquare(new Pair<>(0,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(1,1))){
                 return new Pair<>(1,1);
             }
-            else if(curBoard.checkSquare(new Pair<>(1,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol){
+            else if(curBoard.checkSquare(new Pair<>(1,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(2,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(0,0))){
                 return new Pair<>(0,0);
             }
             
@@ -146,13 +146,13 @@ public class ExpertPlayer implements TicTacToePlayer {
     }
     public Pair<Integer,Integer> dWinRight(TicTacToeBoard curBoard, char yourSymbol,char oppSymbol){
         for(int i = 0; i<3;i++){
-            if (curBoard.checkSquare(new Pair<>(2,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,1))==yourSymbol){
+            if (curBoard.checkSquare(new Pair<>(2,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(1,1))==yourSymbol&& curBoard.isSquareOpen(new Pair<>(0,2))){
                 return new Pair<>(0,2);
             }
-            else if (curBoard.checkSquare(new Pair<>(2,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,2))==yourSymbol){
+            else if (curBoard.checkSquare(new Pair<>(2,0)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(1,1))){
                 return new Pair<>(1,1);
             }
-            else if(curBoard.checkSquare(new Pair<>(1,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,2))==yourSymbol){
+            else if(curBoard.checkSquare(new Pair<>(1,1)) == yourSymbol && curBoard.checkSquare(new Pair<>(0,2))==yourSymbol && curBoard.isSquareOpen(new Pair<>(2,0))){
                 return new Pair<>(2,0);
             }
         }
